@@ -1,0 +1,29 @@
+= Marshaled Attributes
+
+Save marshaled objects using ActiveRecord.
+
+== Instalation
+
+  gem install marshaled_attributes
+
+== Usage
+
+Considering the following schema:
+
+  create_table :pages do |t|
+    t.string 	:name
+    t.text 	:body
+    t.binary 	:meta
+  end
+
+Add the method call <tt>marshaled_attributes</tt> to your model.
+
+  class Page < ActiveRecord::Base
+    marshaled :meta
+  end
+
+  @page = Page.new(:meta => {:last_comment_id => 100})
+  @page.meta
+  #=> {:last_comment_id => 100}
+
+Copyright (c) 2008 Nando Vieira, released under the MIT license
