@@ -15,7 +15,7 @@ begin
     gem.email = "fnando.vieira@gmail.com"
     gem.homepage = "http://github.com/fnando/marshaled_attributes"
     gem.has_rdoc = false
-    gem.add_dependency "rails", ">= 3.0.0"
+    gem.add_dependency "activerecord"
     gem.files = FileList["{Gemfile,Gemfile.lock,Rakefile,MIT-LICENSE,marshaled_attributes.gemspec,README.*}", "{lib,spec,templates}/**/*"]
   end
 
