@@ -16,7 +16,7 @@ Considering the following schema:
     t.binary 	:meta
   end
 
-Add the method call <tt>marshaled_attributes</tt> to your model.
+Add the method call <tt>marshaled</tt> to your model.
 
   class Page < ActiveRecord::Base
     marshaled :meta
